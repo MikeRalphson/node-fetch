@@ -1,7 +1,7 @@
 {
-  "name": "node-fetch",
+  "name": "node-fetch-h2",
   "version": "2.3.0",
-  "description": "A light-weight module that brings window.fetch to node.js",
+  "description": "Implementation of window.fetch which can use http2 seamlessly",
   "main": "lib/index",
   "browser": "./browser.js",
   "module": "lib/index.mjs",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitinn/node-fetch.git"
+    "url": "https://github.com/mikeralphson/node-fetch-h2.git"
   },
   "keywords": [
     "fetch",
@@ -33,9 +33,9 @@
   "author": "David Frank",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bitinn/node-fetch/issues"
+    "url": "https://github.com/mikeralphson/node-fetch-h2/issues"
   },
-  "homepage": "https://github.com/bitinn/node-fetch",
+  "homepage": "https://github.com/mikeralphson/node-fetch-h2",
   "devDependencies": {
     "abort-controller": "^1.0.2",
     "abortcontroller-polyfill": "^1.1.9",
@@ -62,5 +62,7 @@
     "url-search-params": "^1.0.2",
     "whatwg-url": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "http2-client": "^1.2.5"
+  }
 }
