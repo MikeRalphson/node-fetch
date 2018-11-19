@@ -8,8 +8,7 @@
  */
 
 import Url from 'url';
-import http from 'http';
-import https from 'https';
+import h2 from 'http2-client';
 import zlib from 'zlib';
 import Stream from 'stream';
 
@@ -46,7 +45,7 @@ export default function fetch(url, opts) {
 		const request = new Request(url, opts);
 		const options = getNodeRequestOptions(request);
 
-		const send = (options.protocol === 'https:' ? https : http).request;
+		const send = h2.request;
 		const { signal } = request;
 		let response = null;
 
